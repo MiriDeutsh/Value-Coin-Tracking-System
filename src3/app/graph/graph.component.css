@@ -1,0 +1,103 @@
+.graph-container {
+  direction: rtl;
+  background: linear-gradient(to bottom right, #f9f9ff, #f0f4ff);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  color: #3f51b5;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.chart-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  animation: fadeIn 0.7s ease-in;
+}
+
+.loading, .no-data, .error {
+  text-align: center;
+  margin: 20px;
+  color: #999;
+}
+
+.error {
+  color: red;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* אנימציית טעינה בסגנון מטבע מסתובב */
+.coin-spinner {
+  border: 6px solid #ddd;
+  border-top: 6px solid gold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+/* עיטור מטבעות */
+.coin-decoration::before,
+.coin-decoration::after {
+  content: '🪙';
+  font-size: 48px;
+  position: absolute;
+  animation: float 3s infinite ease-in-out;
+  opacity: 0.3;
+}
+
+.coin-decoration::before {
+  top: -10px;
+  right: 20px;
+}
+
+.coin-decoration::after {
+  bottom: -10px;
+  left: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

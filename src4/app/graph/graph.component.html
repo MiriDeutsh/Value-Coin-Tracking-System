@@ -1,0 +1,93 @@
+<div class="page-container">
+  <h1 class="title">מערכת גרפים יוקרתית למעקב אחרי מטבעות</h1>
+
+  <p class="subtitle">
+    בדיקת נתוני מטבעות מאפשרת לך להבין תנודות בשוק, לקבל החלטות כלכליות חכמות ולזהות הזדמנויות. הנתונים מתעדכנים ישירות מהשרת שלנו לפי תקופה ומטבע.
+  </p>
+
+  <div class="filters">
+    <mat-form-field appearance="fill">
+      <mat-label>בחר מטבע</mat-label>
+      <mat-select [(ngModel)]="selectedCurrency" (selectionChange)="onSelectionChange()">
+        <mat-option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>בחר טווח זמן</mat-label>
+      <mat-select [(ngModel)]="selectedTimeRange" (selectionChange)="onSelectionChange()">
+        <mat-option *ngFor="let range of timeRanges" [value]="range">
+          {{ range }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>בחר סוג גרף</mat-label>
+      <mat-select [(ngModel)]="chartType" (selectionChange)="onSelectionChange()">
+        <mat-option value="line">קו</mat-option>
+        <mat-option value="bar">עמודות</mat-option>
+        <mat-option value="area">שטח</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="graph-container">
+    <ngx-charts-line-chart
+      *ngIf="chartType === 'line'"
+      [view]="[700, 400]"
+      [scheme]="colorScheme"
+      [results]="chartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [autoScale]="true"
+      [animations]="true"
+      [legend]="true"
+    ></ngx-charts-line-chart>
+
+    <ngx-charts-bar-vertical
+      *ngIf="chartType === 'bar'"
+      [view]="[700, 400]"
+      [scheme]="colorScheme"
+      [results]="chartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [animations]="true"
+      [legend]="true"
+    ></ngx-charts-bar-vertical>
+
+    <ngx-charts-area-chart
+      *ngIf="chartType === 'area'"
+      [view]="[700, 400]"
+      [scheme]="colorScheme"
+      [results]="chartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [autoScale]="true"
+      [animations]="true"
+      [legend]="true"
+    ></ngx-charts-area-chart>
+
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+    <div class="no-data" *ngIf="!chartData?.length && !errorMessage && !loading">אין נתונים זמינים</div>
+  </div>
+
+  <div class="footer">
+    <h2>למה חשוב לבדוק מחירי דלק?</h2>
+    <p>
+      מחירי הדלק משפיעים ישירות על יוקר המחיה, תחבורה, מוצרי צריכה ועוד. בדיקת מחירים בזמן אמת מאפשרת לך להיערך מראש, לתכנן נסיעות ולזהות תזוזות בשוק האנרגיה.
+    </p>
+    <p>
+      המחירים מוצגים כאן בהתאם למטבע שתבחר ולתקופת הזמן שנבחרה. הנתונים מתעדכנים ממקורות אמינים ומוגשים בצורה נוחה לקריאה.
+    </p>
+  </div>
+
+  <div class="floating-coins">
+    <div class="coin"></div>
+    <div class="coin"></div>
+    <div class="coin"></div>
+  </div>
+</div>

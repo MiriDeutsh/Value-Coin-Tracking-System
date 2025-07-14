@@ -1,0 +1,44 @@
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\bin\Debug\net7.0\Coins.Core.deps.json
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\bin\Debug\net7.0\Coins.Core.dll
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\bin\Debug\net7.0\Coins.Core.pdb
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\obj\Debug\net7.0\Coins.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\obj\Debug\net7.0\Coins.Core.AssemblyInfoInputs.cache
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\obj\Debug\net7.0\Coins.Core.AssemblyInfo.cs
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\obj\Debug\net7.0\Coins.Core.csproj.CoreCompileInputs.cache
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\obj\Debug\net7.0\Coins.Core.dll
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\obj\Debug\net7.0\refint\Coins.Core.dll
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\obj\Debug\net7.0\Coins.Core.pdb
+C:\לימודים שנה ב\Angular\Coins Project\Coins.Core\obj\Debug\net7.0\ref\Coins.Core.dll
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\bin\Debug\net7.0\Coins.Core.deps.json
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\bin\Debug\net7.0\Coins.Core.dll
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\bin\Debug\net7.0\Coins.Core.pdb
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.AssemblyInfoInputs.cache
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.AssemblyInfo.cs
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.csproj.CoreCompileInputs.cache
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.dll
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\obj\Debug\net7.0\refint\Coins.Core.dll
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.pdb
+C:\לימודים שנה ב\Angular\CoinsProject\Coins.Core\obj\Debug\net7.0\ref\Coins.Core.dll
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\bin\Debug\net7.0\Coins.Core.deps.json
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\bin\Debug\net7.0\Coins.Core.dll
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\bin\Debug\net7.0\Coins.Core.pdb
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.AssemblyInfoInputs.cache
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.AssemblyInfo.cs
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.csproj.CoreCompileInputs.cache
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.dll
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\obj\Debug\net7.0\refint\Coins.Core.dll
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\obj\Debug\net7.0\Coins.Core.pdb
+C:\לימודים שנה ב\AngularProject\CoinsProject\Coins.Core\obj\Debug\net7.0\ref\Coins.Core.dll
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\bin\Debug\net7.0\Coins.Core.deps.json
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\bin\Debug\net7.0\Coins.Core.dll
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\bin\Debug\net7.0\Coins.Core.pdb
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\obj\Debug\net7.0\Coins.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\obj\Debug\net7.0\Coins.Core.AssemblyInfoInputs.cache
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\obj\Debug\net7.0\Coins.Core.AssemblyInfo.cs
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\obj\Debug\net7.0\Coins.Core.csproj.CoreCompileInputs.cache
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\obj\Debug\net7.0\Coins.Core.dll
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\obj\Debug\net7.0\refint\Coins.Core.dll
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\obj\Debug\net7.0\Coins.Core.pdb
+C:\לימודים שנה ב\AngularProject\coins-server\Coins.Core\obj\Debug\net7.0\ref\Coins.Core.dll

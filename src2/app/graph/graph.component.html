@@ -1,0 +1,33 @@
+<div class="filters">
+    <!-- בחירת מטבע -->
+    <mat-form-field appearance="fill">
+      <mat-label>סוג מטבע</mat-label>
+      <mat-select [(ngModel)]="selectedCurrency" (selectionChange)="onSelectionChange()">
+        <mat-option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <!-- בחירת טווח זמן -->
+    <mat-form-field appearance="fill">
+      <mat-label>טווח זמן</mat-label>
+      <mat-select [(ngModel)]="selectedTimeRange" (selectionChange)="onSelectionChange()">
+        <mat-option *ngFor="let range of timeRanges" [value]="range">
+          {{ range }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <!-- גרף -->
+  <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+    <ngx-charts-line-chart
+      [view]="[700, 400]"
+      [scheme]="colorScheme"
+      [results]="chartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [autoScale]="true"
+    >
+    </ngx-charts-line-chart>
+  </div>

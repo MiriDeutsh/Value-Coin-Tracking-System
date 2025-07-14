@@ -1,0 +1,82 @@
+<div class="page-container">
+  <h1 class="title">מערכת גרפים יוקרתית למעקב אחרי שערי מטבע</h1>
+
+  <p class="subtitle">
+    בדיקת שערי מטבע בזמן אמת מאפשרת לך לעקוב אחרי שינויים בשוק המט"ח, להבין מגמות ולהחליט מתי לקנות או להמיר מטבע. הנתונים מתעדכנים אוטומטית מהשרת לפי התקופה שנבחרה.
+  </p>
+
+  <div class="filters">
+    <mat-form-field appearance="fill">
+      <mat-label>בחר מטבע</mat-label>
+      <mat-select [(ngModel)]="selectedCurrency" (selectionChange)="onSelectionChange()">
+        <mat-option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>בחר טווח זמן</mat-label>
+      <mat-select [(ngModel)]="selectedTimeRange" (selectionChange)="onSelectionChange()">
+        <mat-option *ngFor="let range of timeRanges" [value]="range">
+          {{ range }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>בחר סוג גרף</mat-label>
+      <mat-select [(ngModel)]="chartType" (selectionChange)="onSelectionChange()">
+        <mat-option value="line">קו</mat-option>
+        <mat-option value="area">שטח</mat-option>
+      </mat-select>
+       </mat-form-field>
+  </div>
+
+  <div class="graph-container">
+    <ngx-charts-line-chart
+      *ngIf="chartType === 'line'"
+      [view]="[700, 400]"
+      [scheme]="colorScheme"
+      [results]="chartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [autoScale]="true"
+      [animations]="true"
+      [legend]="true"
+    ></ngx-charts-line-chart>
+
+
+    <ngx-charts-area-chart
+      *ngIf="chartType === 'area'"
+      [view]="[700, 400]"
+      [scheme]="colorScheme"
+      [results]="chartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [autoScale]="true"
+      [animations]="true"
+      [legend]="true"
+    ></ngx-charts-area-chart>
+
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+    <div class="no-data" *ngIf="!chartData?.length && !errorMessage && !loading">אין נתונים זמינים</div>
+  </div>
+
+  <div class="footer">
+    <h2>למה חשוב לעקוב אחרי שערי מטבע?</h2>
+    <p>
+      שערי המטבע משפיעים על רכישות באינטרנט, תיירות, השקעות ומסחר בינלאומי. מעקב שוטף מאפשר קבלת החלטות כלכליות נבונות ומקסום רווחים.
+    </p>
+    <p>
+      הנתונים המוצגים כאן מתעדכנים ממקורות אמינים בזמן אמת ומוצגים בצורה גרפית נוחה וברורה. בחר את המטבע והתקופה הרצויה כדי לצפות בתמונה מלאה של השוק.
+    </p>
+  </div>
+
+  <div class="floating-coins">
+    <div class="coin"></div>
+    <div class="coin"></div>
+    <div class="coin"></div>
+  </div>
+</div>

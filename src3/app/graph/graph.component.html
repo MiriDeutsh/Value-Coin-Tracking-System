@@ -1,0 +1,88 @@
+<div class="graph-container">
+
+  <!-- כותרת ראשית -->
+  <h1 class="title">📊 ניתוח מטבעות חכם</h1>
+  <p class="subtitle">
+    גלה כיצד משתנים ערכי המטבעות לאורך זמן.<br>
+    כלי זה מאפשר השוואה בזמן אמת, מעקב אחרי מגמות ותחזיות לעתיד.
+  </p>
+
+  <!-- בחירת פרמטרים -->
+  <div class="controls">
+    <mat-form-field appearance="fill">
+      <mat-label>בחר מטבע</mat-label>
+      <mat-select [(ngModel)]="selectedCurrency" (selectionChange)="onSelectionChange()">
+        <mat-option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>בחר טווח זמן</mat-label>
+      <mat-select [(ngModel)]="selectedTimeRange" (selectionChange)="onSelectionChange()">
+        <mat-option *ngFor="let range of timeRanges" [value]="range">{{ range }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>בחר סוג גרף</mat-label>
+      <mat-select [(ngModel)]="chartType">
+        <mat-option value="line">📈 קו</mat-option>
+        <mat-option value="bar">📊 עמודות</mat-option>
+        <mat-option value="pie">🥧 עוגה</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <!-- תצוגת מצב -->
+  <div *ngIf="isLoading" class="loading">
+    <div class="coin-spinner"></div>
+    <p>טוען נתונים...</p>
+  </div>
+
+  <div *ngIf="noData && !isLoading" class="no-data">לא נמצאו נתונים להצגה.</div>
+  <div *ngIf="errorMessage && !isLoading" class="error">{{ errorMessage }}</div>
+
+  <!-- הגרף -->
+  <div class="chart-area" *ngIf="!isLoading && chartData.length > 0">
+    <ngx-charts-line-chart
+      *ngIf="chartType === 'line'"
+      [results]="chartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="true"
+      [animations]="true"
+      [scheme]="colorScheme"
+      [view]="[700, 400]">
+    </ngx-charts-line-chart>
+
+    <ngx-charts-bar-vertical
+      *ngIf="chartType === 'bar'"
+      [results]="chartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="true"
+      [animations]="true"
+      [scheme]="colorScheme"
+      [view]="[700, 400]">
+    </ngx-charts-bar-vertical>
+
+    <ngx-charts-pie-chart
+      *ngIf="chartType === 'pie'"
+      [results]="chartData[0]?.series || []"
+      [labels]="true"
+      [legend]="true"
+      [doughnut]="true"
+      [animations]="true"
+      [scheme]="colorScheme"
+      [view]="[700, 400]">
+    </ngx-charts-pie-chart>
+  </div>
+
+  <!-- ספק המידע -->
+  <footer class="footer">
+    מקור נתונים: <strong>exchangeratesapi.io</strong> | ניתוח בזמן אמת באמצעות Angular
+  </footer>
+
+  <!-- עיטור מטבעות -->
+  <div class="coin-decoration"></div>
+</div>
